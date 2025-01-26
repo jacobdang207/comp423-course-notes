@@ -102,7 +102,7 @@ go mod init github.com/<your-username>/go-container
 Replacing `<your-username>` with your GitHub username. This command initializes the `go.mod` file, and names the module `github.com/<your-username>/go-container.` It is best practice to name your module after where it's source code is located, which in our case is our GitHub repository. However, the module's name is mostly important for publishing the module for others to use, and it won't come into play very much in this tutorial.
 
 ### Step 2. Write the Hello World program
-Create a new file called `hello.go` in the root directory and enter the following Go code:
+Create a new file called `hello.go` in the root directory containing the following Go code:
 ``` go title="hello.go"
 package main
 
@@ -133,14 +133,20 @@ go build hello.go
 ```
 Both `go run` and `go build` compile the file, however `go run` runs the binary immediately and does not leave it in your project directory, while `go build` creates a binary in your folder that you must run manually. 
 
-## Part 4. Pushing files to GitHub
-To add your new files to your GitHub repository, you can enter the following commands:
+## Part 4. Commit your changes
+In order to commit your changes, run the following commands:
 ``` bash
 git add .
-git commit -m "Set up dev container and created hello world program"
+git commit -m "Set up dev container and create hello world program"
+```
+Running these commands will first stage your changes, and then create a new commit out of them.
+
+## Part 5. Push to Github
+In order to push the new commit to your GitHub repository, run the following command:
+``` bash
 git push origin main
 ```
-These commands stage all your changes, commit them, and then push them to the remote repository.
+This command will push the commit you created in Part 4 to the remote GitHub repository.
 
 ## Conclusion
 This is the end of the tutorial! You have learned how to create a Go dev container in VS Code, make a short program in Go, and put your project on GitHub.
