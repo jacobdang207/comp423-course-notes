@@ -1,7 +1,7 @@
 # Setting up a dev container for Go
 
 * Primary author: [Jacob Dang](https://github.com/jacobdang207)
-* Reviewer [Christopher McClanahan](https://github.com/chrmccl)
+* Reviewer: [Christopher McClanahan](https://github.com/chrmccl)
 
 In this tutorial, you will learn how to set up a Go dev container in Visual Studio Code (VS Code), how to create a simple Hello World program in Go, and how to put your Go project on GitHub.
 
@@ -13,7 +13,7 @@ Make sure you have the following set up before starting this tutorial:
 1. **A GitHub Account:** You may sign up for GitHub on their [website](https://github.com/).
 2. **Git installed:** You can install git as shown [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 3. **VS Code:** Can be downloaded and installed from [here](https://code.visualstudio.com/).
-4. **Docker:** Any version of the Docker engine should work, but in this tutorial we will be using [Docker Desktop](https://www.docker.com/products/docker-desktop).
+4. **Docker:** Any version of the Docker Engine should work, but in this tutorial we will be using [Docker Desktop](https://www.docker.com/products/docker-desktop).
 5. **Command-line basics:** Some knowledge of how to use a command-line interface will be important, as we will be running various commands through our terminal.
 
 ## Part 1. Creating the Repository
@@ -89,7 +89,7 @@ Each property in the `devcontainer.json` file allows us to define something diff
 There are many more propeties that can be set. A list of them can be found [here](https://containers.dev/implementors/json_reference/).
 
 ### Step 2. Reopen the Project in a VS Code Dev Container
-You can now open the project in a dev container. First, make sure Docker Desktop is running. Then, in the VS Code window with your project press `Ctrl + Shift + P,` type in "Dev Containers: Reopen in Container" to the prompt, and then select the option that pops up. It may take a bit for the image to download.
+You can now open the project in a dev container. First, make sure Docker Desktop is running. Then, in the VS Code window with your project press `Ctrl + Shift + P`, type in "Dev Containers: Reopen in Container" to the prompt, and then select the option that pops up. It may take a bit for the image to download.
 
 Once the dev container setup completes, you can open a new terminal window within VS Code and run `go version` to see what version of Go is running in the container. It should be the latest version (1.23 as of writing this in January of 2025).
 
@@ -99,7 +99,7 @@ Before writing any code, you should initialize a `go.mod` file in your project's
 ``` bash
 go mod init github.com/<your-username>/go-container
 ```
-Replacing `<your-username>` with your GitHub username. This command initializes the `go.mod` file, and names the module `github.com/<your-username>/go-container.` It is best practice to name your module after where it's source code is located, which in our case is our GitHub repository. However, the module's name is mostly important for publishing the module for others to use, and it won't come into play very much in this tutorial.
+Be sure to replace `<your-username>` with your GitHub username. This command initializes the `go.mod` file, and names the module `github.com/<your-username>/go-container.` It is best practice to name your module after where it's source code is located, which in our case is our GitHub repository. However, the module's name is mostly important for publishing the module for others to use, and it won't come into play very much in this tutorial.
 
 ### Step 2. Write the Hello World program
 Create a new file called `hello.go` in the root directory containing the following Go code:
@@ -114,7 +114,7 @@ func main() {
 ```
 This program does a couple of things:
 
-1. Packages the file into the `main` package. The `main` package is the package that the program is executed through. The `main()` function executes when the `main` package is run.
+1. Packages the file into the `main` package. The `main` package is the package that Go programs are executed through. The `main()` function executes when the `main` package is run.
 2. Imports the `fmt` package, which contains functions for formatting text and printing.
 3. Calls the `main()` function and prints out a message to the console.
 
@@ -126,7 +126,7 @@ go run hello.go
 ```
 The program should have printed out `Hello COMP423`.
 
-You can also build an executable file from `hello.go` and run the binary directly it like so:
+You can also build an executable file from `hello.go` and run the binary directly like so:
 ``` bash
 go build hello.go
 ./hello
