@@ -99,7 +99,10 @@ Before writing any code, you should initialize a `go.mod` file in your project's
 ``` bash
 go mod init github.com/<your-username>/go-container
 ```
-Be sure to replace `<your-username>` with your GitHub username. This command initializes the `go.mod` file, and names the module `github.com/<your-username>/go-container.` It is best practice to name your module after where it's source code is located, which in our case is our GitHub repository. However, the module's name is mostly important for publishing the module for others to use, and it won't come into play very much in this tutorial.
+Be sure to replace `<your-username>` with your GitHub username. This command initializes the `go.mod` file, and names the module `github.com/<your-username>/go-container.` 
+
+!!! notes
+    It is best practice to name your module after where it's source code is located, which in our case is our GitHub repository. However, the module's name is mostly important for publishing the module for others to use, and it won't come into play very much in this tutorial.
 
 ### Step 2. Write the Hello World program
 Create a new file called `hello.go` in the root directory containing the following Go code:
@@ -131,7 +134,9 @@ You can also build an executable file from `hello.go` and run the binary directl
 go build hello.go
 ./hello
 ```
-Both `go run` and `go build` compile the file, however `go run` runs the binary immediately and does not leave it in your project directory, while `go build` creates a binary in your folder that you must run manually. 
+`go build` can be thought of as Go's version of the gcc command for C files, as both commands compile source code into a binary file which can be executed by your computer. 
+
+Both `go run` and `go build` compile files to be executed, however `go run` runs the binary immediately and does not leave it in your project directory, while `go build` creates a binary in your folder that you must run manually. 
 
 ## Part 4. Commit your changes
 In order to commit your changes, run the following commands:
@@ -140,6 +145,10 @@ git add .
 git commit -m "Set up dev container and create hello world program"
 ```
 Running these commands will first stage your changes, and then create a new commit out of them.
+
+!!! Tip
+
+    It is best practice to avoid committing compilation outputs to your git repository. In order to avoid staging compilation outputs while preserving the ease of `git add .`, you can create a `.gitignore` file containing the name of all files you want git to never stage.
 
 ## Part 5. Push to Github
 In order to push the new commit to your GitHub repository, run the following command:
