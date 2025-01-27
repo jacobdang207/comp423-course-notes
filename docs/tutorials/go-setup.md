@@ -99,7 +99,10 @@ Before writing any code, you should initialize a `go.mod` file in your project's
 ``` bash
 go mod init github.com/<your-username>/go-container
 ```
-Be sure to replace `<your-username>` with your GitHub username. This command initializes the `go.mod` file, and names the module `github.com/<your-username>/go-container.` It is best practice to name your module after where it's source code is located, which in our case is our GitHub repository. However, the module's name is mostly important for publishing the module for others to use, and it won't come into play very much in this tutorial.
+Be sure to replace `<your-username>` with your GitHub username. This command initializes the `go.mod` file, and names the module `github.com/<your-username>/go-container.` 
+
+!!! notes
+    It is best practice to name your module after where it's source code is located, which in our case is our GitHub repository. However, the module's name is mostly important for publishing the module for others to use, and it won't come into play very much in this tutorial.
 
 ### Step 2. Write the Hello World program
 Create a new file called `hello.go` in the root directory containing the following Go code:
