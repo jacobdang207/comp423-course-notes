@@ -131,7 +131,9 @@ You can also build an executable file from `hello.go` and run the binary directl
 go build hello.go
 ./hello
 ```
-Both `go run` and `go build` compile the file, however `go run` runs the binary immediately and does not leave it in your project directory, while `go build` creates a binary in your folder that you must run manually. 
+`go build` can be thought of as Go's version of the gcc command for C files, as both commands compile source code into a binary file which can be executed by your computer. 
+
+Both `go run` and `go build` compile files to be executed, however `go run` runs the binary immediately and does not leave it in your project directory, while `go build` creates a binary in your folder that you must run manually. 
 
 ## Part 4. Commit your changes
 In order to commit your changes, run the following commands:
