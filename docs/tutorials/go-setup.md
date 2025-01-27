@@ -143,6 +143,10 @@ git commit -m "Set up dev container and create hello world program"
 ```
 Running these commands will first stage your changes, and then create a new commit out of them.
 
+!!! Tip
+
+    It is best practice to avoid committing compilation outputs to your git repository. In order to avoid staging compilation outputs while preserving the ease of `git add .`, you can create a `.gitignore` file containing the name of all files you want git to never stage.
+
 ## Part 5. Push to Github
 In order to push the new commit to your GitHub repository, run the following command:
 ``` bash
